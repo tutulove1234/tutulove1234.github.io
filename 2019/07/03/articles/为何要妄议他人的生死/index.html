@@ -1,37 +1,461 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"tutulove1234.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="前天，佛罗里达大学在读博士生自杀的事情在舆论中发酵起来了。被选中计算机顶级会议的论文本是可喜的事情，但这背后却是其导师暗中操作，论文中的内容这位博士生还未来得及提供数据证明，就被导师（老板）被迫发出了这篇论文。然而后来的补充数据证明论文中的结论是错误的。这样，他面临着会被业界指责造假等恶名。他深刻认识到事情不能这样进行下去，意识到和汉芯的造假别无二致，但老板不会撤稿。并且在写论文过程中，多次被">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为何妄议他人的生死">
+<meta property="og:url" content="https://tutulove1234.github.io/2019/07/03/articles/%E4%B8%BA%E4%BD%95%E8%A6%81%E5%A6%84%E8%AE%AE%E4%BB%96%E4%BA%BA%E7%9A%84%E7%94%9F%E6%AD%BB/index.html">
+<meta property="og:site_name" content="落叶清风L">
+<meta property="og:description" content="前天，佛罗里达大学在读博士生自杀的事情在舆论中发酵起来了。被选中计算机顶级会议的论文本是可喜的事情，但这背后却是其导师暗中操作，论文中的内容这位博士生还未来得及提供数据证明，就被导师（老板）被迫发出了这篇论文。然而后来的补充数据证明论文中的结论是错误的。这样，他面临着会被业界指责造假等恶名。他深刻认识到事情不能这样进行下去，意识到和汉芯的造假别无二致，但老板不会撤稿。并且在写论文过程中，多次被">
+<meta property="og:locale">
+<meta property="og:image" content="https://windleaves.oss-cn-beijing.aliyuncs.com/suisuinian/whydiscussotherslife.jpg">
+<meta property="article:published_time" content="2019-07-03T14:42:00.000Z">
+<meta property="article:modified_time" content="2019-07-09T13:31:29.654Z">
+<meta property="article:author" content="萧然AND沐橦">
+<meta property="article:tag" content="坦诚是一门学问">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://windleaves.oss-cn-beijing.aliyuncs.com/suisuinian/whydiscussotherslife.jpg">
+
+<link rel="canonical" href="https://tutulove1234.github.io/2019/07/03/articles/%E4%B8%BA%E4%BD%95%E8%A6%81%E5%A6%84%E8%AE%AE%E4%BB%96%E4%BA%BA%E7%9A%84%E7%94%9F%E6%AD%BB/">
 
 
-{% block content %}
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+  <title>为何妄议他人的生死 | 落叶清风L</title>
+  
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">落叶清风L</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于我</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://tutulove1234.github.io/2019/07/03/articles/%E4%B8%BA%E4%BD%95%E8%A6%81%E5%A6%84%E8%AE%AE%E4%BB%96%E4%BA%BA%E7%9A%84%E7%94%9F%E6%AD%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="萧然AND沐橦">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落叶清风L">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为何妄议他人的生死
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-03 22:42:00" itemprop="dateCreated datePublished" datetime="2019-07-03T22:42:00+08:00">2019-07-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-09 21:31:29" itemprop="dateModified" datetime="2019-07-09T21:31:29+08:00">2019-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" itemprop="url" rel="index"><span itemprop="name">碎碎念</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="https://windleaves.oss-cn-beijing.aliyuncs.com/suisuinian/whydiscussotherslife.jpg" class="full-image"/>
+
+<p>前天，佛罗里达大学在读博士生自杀的事情在舆论中发酵起来了。被选中计算机顶级会议的论文本是可喜的事情，但这背后却是其导师暗中操作，论文中的内容这位博士生还未来得及提供数据证明，就被导师（老板）被迫发出了这篇论文。然而后来的补充数据证明论文中的结论是错误的。这样，他面临着会被业界指责造假等恶名。他深刻认识到事情不能这样进行下去，意识到和汉芯的造假别无二致，但老板不会撤稿。并且在写论文过程中，多次被老板逼摧，只得加班加点写。</p>
+<p>心里积累的怨愤，和对这样造假的痛斥、无助，面临名声败坏，职业生涯可能无望巨大的压力下，最终，他选择了结束自己的生命，留下了遗书，希望警醒后来的人，不要乱搞事情，学术做到什么程度，论文就写到什么程度，别想着大越步。希望自己的离开能给世界带来一点点改变，希望每个人保持一份单纯和善良，他会在另一个世界祝福。</p>
+<p>今日，同事提起了此事，在中午去吃饭的路上，开始议论。不断地表达着他不该自杀，有那么多那么多的路可以走，心里承受能力不行。如果这样就自杀了，那该自杀的博士生多了去了。</p>
+<p>我和他争论了几句，最终还是选择沉默了。因为他似乎说的都对，是啊，都对。我无从反驳。</p>
+<p>可是，可是，我仍旧疑惑，久久不能接受，不能平复心中的疑惑。</p>
+<p>为什么要妄议别人的生死呢？又为什么指责他心里承受能力不行呢？他已经走了，但走之前他经过了何种斗争，何种压力，妄议的人知道吗？已经走了的人，他总有不恋这个俗世的原由，你不知，却强求他活下来。他还能依旧快乐吗？又或者你能为他做这个决定之后的生活负起责任呢？</p>
+<p>我们活着的人，独立的人，在别人死后去评判。这殊不是“站在当今而评论历史的对错”吗？历史在那个时刻发生的对吗？你又是如何知其对错呢？站在当下，站在自己的立场，你当然可以说出侃侃之言，评判过去，如何不该，如何错了。可当下的你若是冲动做出来的事情，你觉得对与否？是心里在暗示你对了？你当然得给这个行为一定时间，之后再去看，然后才能评判对错吧。这没有问题，因为那是你的故事，你切身经历了它。可是现在，那是别人的过往，别人的经历，你去指责他。难道这在逻辑上能够讲得通吗？他既没有触犯宪法，又未伤及他人，他只是选择用自己的方式，结束自己的生命啊！难道你的生命是掌握在他人手上的吗？</p>
+<p>你觉得惋惜，觉得心寒，我都可以理解。因为你有同理心，惋惜这年轻的生命，心寒这龌龊的规则。可是请不要妄议、评判别人的选择啊。</p>
+<p>若是他的离开，能让我们去重视某些问题，某些勾当，改善这些丑陋的东西。我想，他在天上也可以欣慰了吧。<br>　　<br>　　　　　　　　　　　　　　　　　　　　　　　然 2019-07-03 午 笔<br>　　<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247524414&idx=1&sn=4aa121618787ed7921f494544b84b5f1&chksm=e8d0d74cdfa75e5a6f25f0c29e361afc1804c253872260dcec850b931cbcee0341d2667fda1e&mpshare=1&scene=23&srcid=0703IonplOXOuI9VIJhrFvJm#rd">附链接</a></p>
+<p><strong>未经允许 严禁转载</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9D%A6%E8%AF%9A%E6%98%AF%E4%B8%80%E9%97%A8%E5%AD%A6%E9%97%AE/" rel="tag"># 坦诚是一门学问</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/06/29/articles/%E5%9B%9E%E6%9C%9B/" rel="prev" title="回望">
+      <i class="fa fa-chevron-left"></i> 回望
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/07/09/articles/%E9%9D%A2%E5%BA%97%E8%80%81%E6%9D%BF%E5%A8%98/" rel="next" title="面店老板娘">
+      面店老板娘 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTI4MC8yMTc5Mw=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="萧然AND沐橦"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">萧然AND沐橦</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tutulove1234" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tutulove1234" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:windleaves@xiyoulinux.org" title="E-Mail → mailto:windleaves@xiyoulinux.org" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019-06-23 11:00 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">萧然AND沐橦</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+</body>
+</html>

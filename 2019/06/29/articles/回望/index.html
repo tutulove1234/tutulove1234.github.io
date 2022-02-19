@@ -1,37 +1,466 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"tutulove1234.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="如果我能将早晨的自己和晚上的自己重叠，如果我能在一天里穿梭。那么 … … 清晨，匆忙但富有朝气地行走在地铁站的换成路上，手里拿着读过半的书，在自动手扶梯上向另一边的手扶梯望去。和我相近相似的人们，在向上走。我的目光和他们的目光时不时地汇集。我虽读不出那里面潜藏着什么，有哪些欢欣和忧虑，却总是觉着都在机器里（轮回里）运转着。 不断向下，慢慢错过原本在视野中的人们，过去了的，就只能看到背影，在扶梯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="回望">
+<meta property="og:url" content="https://tutulove1234.github.io/2019/06/29/articles/%E5%9B%9E%E6%9C%9B/index.html">
+<meta property="og:site_name" content="落叶清风L">
+<meta property="og:description" content="如果我能将早晨的自己和晚上的自己重叠，如果我能在一天里穿梭。那么 … … 清晨，匆忙但富有朝气地行走在地铁站的换成路上，手里拿着读过半的书，在自动手扶梯上向另一边的手扶梯望去。和我相近相似的人们，在向上走。我的目光和他们的目光时不时地汇集。我虽读不出那里面潜藏着什么，有哪些欢欣和忧虑，却总是觉着都在机器里（轮回里）运转着。 不断向下，慢慢错过原本在视野中的人们，过去了的，就只能看到背影，在扶梯">
+<meta property="og:locale">
+<meta property="og:image" content="https://windleaves.oss-cn-beijing.aliyuncs.com/suisuinian/evelator.jpg">
+<meta property="article:published_time" content="2019-06-29T14:57:00.000Z">
+<meta property="article:modified_time" content="2019-07-09T13:35:13.272Z">
+<meta property="article:author" content="萧然AND沐橦">
+<meta property="article:tag" content="坦诚是一门学问">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://windleaves.oss-cn-beijing.aliyuncs.com/suisuinian/evelator.jpg">
+
+<link rel="canonical" href="https://tutulove1234.github.io/2019/06/29/articles/%E5%9B%9E%E6%9C%9B/">
 
 
-{% block content %}
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+  <title>回望 | 落叶清风L</title>
+  
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">落叶清风L</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-关于我">
+
+    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于我</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://tutulove1234.github.io/2019/06/29/articles/%E5%9B%9E%E6%9C%9B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="萧然AND沐橦">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="落叶清风L">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          回望
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-29 22:57:00" itemprop="dateCreated datePublished" datetime="2019-06-29T22:57:00+08:00">2019-06-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-07-09 21:35:13" itemprop="dateModified" datetime="2019-07-09T21:35:13+08:00">2019-07-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" itemprop="url" rel="index"><span itemprop="name">碎碎念</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <img src="https://windleaves.oss-cn-beijing.aliyuncs.com/suisuinian/evelator.jpg" class="full-image"/>
+
+<p>如果我能将早晨的自己和晚上的自己重叠，如果我能在一天里穿梭。那么 … …</p>
+<p>清晨，匆忙但富有朝气地行走在地铁站的换成路上，手里拿着读过半的书，在自动手扶梯上向另一边的手扶梯望去。和我相近相似的人们，在向上走。我的目光和他们的目光时不时地汇集。我虽读不出那里面潜藏着什么，有哪些欢欣和忧虑，却总是觉着都在机器里（轮回里）运转着。</p>
+<p>不断向下，慢慢错过原本在视野中的人们，过去了的，就只能看到背影，在扶梯上或依旧挺直或低头。不断地有新的视线投到我这边来，很少有人观察到对面扶梯上有个小胖子默默地看着他，不作声。他们或是望着我不知的地方，眼中无神，或是低头玩弄手中的智能手机，又或者互相探讨着什么。偶尔有些人朝着对面望过来。可是也只是一扫而过，之后又失望地低下头，似乎没有找到想要找的东西。不过终究会有一两个人，在一片扶梯的人丛中找到我的视线。于是我们可能会对视一瞬间，又有可能他（她）逃过我的眼睛。而我也有时会惊慌失措地将目光移开。</p>
+<p>只是，我们的眼神相会的一刹，目光里、心里发生了多少奇妙的变化啊。</p>
+<p>好生有趣，好生幸运，在匆匆的人流里和你眼神片刻会晤。</p>
+<p>若是我能在一天里穿梭 ，就请让清晨的我和夜晚的我相遇吧。</p>
+<p>或许就是在熟悉的扶梯两侧，上班的我默默地注视着对岸，而下班的我也疲惫地望着另一边。</p>
+<p>于是，夜晚的我看到了清晨时匆忙地、富有朝气的自己。寻觅的眼神，匆忙躲避的目光，像是发现了夜晚的自己。</p>
+<p>在看得透一天里会发生什么的日子里，在连在同一个地方出现的自己都能精确描绘的日子里，渐渐地，失去了太多的意义。是自己迷了路么？想在人群中寻找陌生的答案？</p>
+<p>可我还是清楚地在夜晚归家的路上、在换乘的路上、在扶梯一侧望见另一侧清晨时天真、稚嫩的自己、不知所措的自己，时而却又会充满力量的自己。</p>
+<p>如果有可能的话，我还是想在清晨时，给夜晚时的自己加个油，或许清晨与我相视的人儿尚残存有夜晚时我的身影吧。我想说啊，“哈哈，谁都不易呢，即使是知道了这一日的终了是何样，可还是可以和那些曾经经历过的美好一起度过这辛苦的一天吧。”</p>
+<p>如果再可以的话，也让夜归的自己，给清晨时扶梯另一侧的自己，说声了不起吧。</p>
+<p>已然满身风霜了，生满了棱角。想到自己的小窝。想到勇敢地从早晨努力到现在的自己，就夸一下自己吧。</p>
+<p>夜归的人们同我一起在地铁上、换乘路上、扶梯上、路灯下，风时不时吹过，吹走了什么？无人知晓。月亮会有圆时，朝阳明日依旧会冉冉升起。可路人啊，我还会再次与你相遇，相视吗？</p>
+<p><strong>未经允许 严禁转载</strong></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9D%A6%E8%AF%9A%E6%98%AF%E4%B8%80%E9%97%A8%E5%AD%A6%E9%97%AE/" rel="tag"># 坦诚是一门学问</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/05/articles/%E4%B8%8B%E7%8F%AD%E6%99%9A%E5%BD%92%E5%AE%B6%E5%9C%B0%E9%93%81%E4%B8%AD%E4%B9%A6/" rel="prev" title="下班晚归家地铁中书">
+      <i class="fa fa-chevron-left"></i> 下班晚归家地铁中书
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/07/03/articles/%E4%B8%BA%E4%BD%95%E8%A6%81%E5%A6%84%E8%AE%AE%E4%BB%96%E4%BA%BA%E7%9A%84%E7%94%9F%E6%AD%BB/" rel="next" title="为何妄议他人的生死">
+      为何妄议他人的生死 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTI4MC8yMTc5Mw=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="萧然AND沐橦"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">萧然AND沐橦</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/tutulove1234" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tutulove1234" rel="noopener" target="_blank"><i class="github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:windleaves@xiyoulinux.org" title="E-Mail → mailto:windleaves@xiyoulinux.org" rel="noopener" target="_blank"><i class="envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019-06-23 11:00 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">萧然AND沐橦</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+</body>
+</html>
